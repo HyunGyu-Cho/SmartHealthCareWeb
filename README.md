@@ -10,7 +10,7 @@
 - 또한, 시연 영상을 통해 대략적인 프로그램의 동작과정을 이해할 수 있습니다.
 - [프로젝트 발표 PPT](docs/Smart_Healthcare_System_Presentation.pptx)
 - [시연 영상](https://youtu.be/s7_HekvGIO0)
-
+    - 웹 홈페이지 영상 출처: Video by [freefitnessmedia] from Pixabay
 ### 완성된 기능
 - ✅ 인바디 데이터 입력 및 저장
 - ✅ 기본적인 신체 분석 결과 표시
