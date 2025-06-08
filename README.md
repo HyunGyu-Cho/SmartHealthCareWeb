@@ -220,9 +220,3 @@ python app.py
 - inbody_final_2_labeled.csv
 - inbody_final_labeled.csv
 - inbody_full.csv
-
-## API 문서
-
-AI 모델 서버는 다음과 같은 엔드포인트를 제공합니다:
-- `/predict`: 건강 상태 예측
-- `/analyze`: 건강 데이터 분석
