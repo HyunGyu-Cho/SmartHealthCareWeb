@@ -191,6 +191,52 @@
 - 데이터 전처리 및 클러스터링
 - scikit-learn 기반 머신러닝
 
+---
+
+## API KEY 설정 방법
+
+일부 기능을 사용하려면 별도의 API KEY가 필요할 수 있습니다.
+우리 프로젝트에서 사용한 API는 Chat gpt api, unsplash api 입니다.
+API KEY는 보안상 코드에 직접 포함하지 않았고 별도의 env파일을 만들어 포함시켰습니다. 
+
+### 1. Chat gpt API
+용도: AI 기반 운동 추천, 식단 추천, 키워드 추출 등
+설정: 백엔드의 application.properties에 openai.api.key로 API KEY를 저장
+ChatGptService.java에서 OpenAI API 호출
+
+### 2. Unsplash API
+용도: 운동/식단 관련 이미지를 검색해서 제공
+설정: 프론트엔드의 .env에 REACT_APP_UNSPLASH_KEY로 API KEY를 저장
+백엔드의 application.properties에 unsplash.access.key로 API KEY를 저장
+ImageService.java 및 프론트엔드 fetchUnsplashImage 함수에서 Unsplash API 호출
+
+### 3. 프론트엔드(API KEY 설정)
+
+1. `frontend/Smart-Healthcare-main` 디렉토리 내에 `.env` 파일을 생성합니다.
+2. 아래와 같이 API KEY를 입력합니다.
+    ```
+    REACT_APP_API_KEY=여기에_발급받은_API_KEY_입력
+    ```
+
+### 4. 백엔드(Spring Boot) 환경 변수 설정
+
+- `backend/smart-healthcare/src/main/resources/application.properties` 에 아래와 같이 설정합니다.
+    ```
+    external.api.key=여기에_발급받은_API_KEY_입력
+    ```
+- 또는 운영 환경에서는 시스템 환경 변수로 관리하는 것이 좋습니다.
+
+### 5. API KEY 발급 및 위치 안내
+
+- API KEY는 각 서비스 공식 홈페이지에서 회원가입 후 발급받을 수 있습니다.
+- 발급받은 KEY는 위에서 안내한 위치에 입력해 주세요.
+
+
+**⚠️ 주의:**  
+API KEY가 외부에 노출되지 않도록 반드시 `.env`, `application.properties` 등은 깃허브에 업로드하지 마세요.
+
+---
+
 ## 설치 및 실행
 
 ### 프론트엔드
